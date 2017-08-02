@@ -1,32 +1,32 @@
 <div class="row">
   <div class="container-fluid rpm-content rpm-box">
-        <div class="row">
-          <div class="col-xs-8 col-xs-offset-2">
-            <img class="img-responsive logo-img" src="/imgs/eletrobras-logo.png" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <form name="formLocalizacao" ng-controller="formController as form">
-              <div class="form-group">
-                <label for="exampleInputSubestação">Subestação Origem</label>
-                <select ng-model="form.subestacaoOrigem" class="form-control">
-                  <option ng-repeat="subestacao in form.subestacoes">{{subestacao.codigo}}</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputLinha">Linha</label>
-                <select ng-model="form.linhaCodigo" class="form-control" ng-disabled="!form.subestacaoOrigem">
-                  <option ng-repeat="linha in form.linhasDaSubestacao" value={{linha.codigo}}>{{linha.nome}} {{linha.codigo}}</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputDistancia">Distância</label>
-                <input ng-model="form.distancia" type="text" class="form-control" id="exampleInputDistancia" placeholder="Distância"  ng-disabled="!form.linhaCodigo" ng-required="true" ng-pattern="/^\d{1,100}$/">
-              </div>
-              <button ng-disabled="!form.distancia" type="submit" class="btn btn-primary btn-block" ng-keydown="$event.keyCode === 13 && form.localizacaoClick(form.linhaCodigo, form.distancia)" ng-click="form.localizacaoClick(form.linhaCodigo, form.distancia)">Obter Localização</button>
-            </form>
-          </div>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <img class="img-responsive logo-img" src="/imgs/eletrobras-logo.png" alt="">
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <form name="formLocalizacao">
+            <div class="form-group">
+              <label for="exampleInputSubestação">Subestação Origem</label>
+              <select ng-model="form.subestacaoOrigem" class="form-control">
+                <option ng-repeat="subestacao in form.subestacoes">{{subestacao.codigo}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputLinha">Linha</label>
+              <select ng-model="form.linhaCodigo" class="form-control" ng-disabled="!form.subestacaoOrigem">
+                <option ng-repeat="linha in form.linhasDaSubestacao" value={{linha.codigo}}>{{linha.nome}} {{linha.codigo}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputDistancia">Distância</label>
+              <input ng-model="form.distancia" type="text" class="form-control" id="exampleInputDistancia" placeholder="Distância"  ng-disabled="!form.linhaCodigo" ng-required="true" ng-pattern="/^\d{1,100}$/">
+            </div>
+            <button ng-disabled="!form.distancia" type="submit" class="btn btn-primary btn-block" ng-keydown="$event.keyCode === 13 && form.localizacaoClick(form.linhaCodigo, form.distancia)" ng-click="form.localizacaoClick(form.linhaCodigo, form.distancia)">Obter Localização</button>
+          </form>
+        </div>
+      </div>
+  </div>
 </div>

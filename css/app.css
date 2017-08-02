@@ -21,7 +21,10 @@ body{
     background-color: white;
 }
 
-
+.rpm-text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
 .rpm-footer{
   margin-top: 10px;
   width: 290px;

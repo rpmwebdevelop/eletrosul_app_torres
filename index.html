@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS Assets -->
     <link rel="stylesheet" href="/css/assets/bootstrap.min.css">
-     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- CSS Assets -->
     <link rel="stylesheet" href="/css/app.css">
     <!-- JS Assets -->
     <script src="/js/assets/angular.min.js"></script>
-    <script src="/js/assets/require.js"></script>
     <script src="/js/assets/angular-route.min.js"></script>
     <!-- JS App -->
     <script src="/js/app/app.js"></script>
@@ -20,7 +19,7 @@
     <title>Linhas Eletrosul</title>
   </head>
   <body>
-    <div class="container-fluid" ng-view></div>
+    <div class="container-fluid" ng-view ng-controller="formController as form"></div>
     <footer class="container rpm-box rpm-footer">
       <div class="row">
         <div class="col-xs-10">

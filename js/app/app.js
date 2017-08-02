@@ -1,5 +1,9 @@
 var app = angular.module("linhasEletrosul",["ngRoute"]);
 
+app.config(['$locationProvider', function($locationProvider) {
+  $locationProvider.hashPrefix('');
+}]);
+
 var subs =
 [
   {

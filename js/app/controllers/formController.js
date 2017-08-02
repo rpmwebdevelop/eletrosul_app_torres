@@ -1,4 +1,4 @@
-app.controller("formController", function($scope){
+app.controller("formController", function($scope, $location){
   this.subestacoes = subs;
 
   this.linhas = lns;
@@ -34,7 +34,7 @@ app.controller("formController", function($scope){
     var torres = this.localizaTorres(linha, distancia);
 
     this.criaMensagens(torres, linha, distancia);
-    console.log(this.mensagens);
+    $location.path("/distancia");
   }
 
   this.localizaLinha = function(linhaCodigo){
