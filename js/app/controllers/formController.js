@@ -28,6 +28,9 @@ app.controller("formController", function($scope, $location){
       }
     }
   }
+  this.voltarClick() = function(){
+    $location.path("/");
+  }
 
   this.localizacaoClick = function (linhaCodigo, distancia){
     var linha = this.localizaLinha(linhaCodigo);
