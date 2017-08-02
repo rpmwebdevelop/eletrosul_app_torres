@@ -9,6 +9,8 @@ app.controller("formController", function($scope, $location){
   this.subestacaoOrigem;
   this.linhaCodigo;
   this.mensagens = {'torres':'', 'distTorre1':'', 'distTorre2':''};
+  this.torresFalha;
+  this.torreSelecionada;
 
   $scope.$watch(angular.bind(this,
     function () {
@@ -28,15 +30,26 @@ app.controller("formController", function($scope, $location){
       }
     }
   }
-  this.voltarClick() = function(){
-    $location.path("/");
+  this.voltarClick = function(page){
+    $location.path(page);
+    switch (page) {
+      case "/":
+        this.mensagens = {'torres':'', 'distTorre1':'', 'distTorre2':''};
+        this.torresFalha = "";
+        break;
+      case "/distancia":
+        this.torreSelecionada = "";
+        break;
+      default:
+
+    }
   }
 
   this.localizacaoClick = function (linhaCodigo, distancia){
     var linha = this.localizaLinha(linhaCodigo);
-    var torres = this.localizaTorres(linha, distancia);
+    this.torresFalha = this.localizaTorres(linha, distancia);
 
-    this.criaMensagens(torres, linha, distancia);
+    this.criaMensagens(this.torresFalha, linha, distancia);
     $location.path("/distancia");
   }
 
@@ -63,7 +76,9 @@ app.controller("formController", function($scope, $location){
 
     return torres;
   }
-
+  this.torresClick = function(torres){
+      $location.path("/torres");
+  }
   this.torresSub1 = function(linha, distancia){
     var torres = [];
     var torre;

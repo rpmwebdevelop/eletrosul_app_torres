@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="container-fluid rpm-content rpm-box rpm-text">
+    <div class="row">
+      <div class="col-xs-12">
+        <form name="torreForm">
+          <div class="form-group">
+            <label for="exampleInputSubestação">Torre</label>
+            <select ng-model="form.torreSelecionada" class="form-control">
+              <option ng-repeat="torre in form.torresFalha track by $index" value="{{$index}}">Torre {{torre.id}}</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="alert alert-success" ng-show="form.torreSelecionada">
+      <h5>Fase A: {{form.torresFalha[form.torreSelecionada].faseA}}</h5>
+      <h5>Fase B: {{form.torresFalha[form.torreSelecionada].faseB}}</h5>
+      <h5>Fase C: {{form.torresFalha[form.torreSelecionada].faseC}}</h5>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-primary" name="button" ng-click="form.voltarClick('/distancia')">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

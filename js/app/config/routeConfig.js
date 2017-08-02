@@ -5,4 +5,7 @@ app.config(function($routeProvider){
 	$routeProvider.when("/distancia", {
 		templateUrl: "views/distancia.html"
 	});
+	$routeProvider.when("/torres", {
+		templateUrl: "views/torres.html"
+	});
 });
