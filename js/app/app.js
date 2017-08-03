@@ -16,20 +16,20 @@ var subs =
   },
   {
     'desc':'alguma coisa',
-    'codigo':'BIG'
-  },
-  {
-    'desc':'alguma coisa',
-    'codigo':'JBL'
-  },
-  {
-    'desc':'alguma coisa',
     'codigo':'UHBC'
   },
   {
     'desc':'alguma coisa',
     'codigo':'BNE'
   }
+  /*{
+    'desc':'alguma coisa',
+    'codigo':'BIG'
+  },
+  {
+    'desc':'alguma coisa',
+    'codigo':'JBL'
+  },*/
 ];
 var lns =
 [
@@ -217,7 +217,7 @@ var lns =
       }
     ]
   },
-  {
+  /*{
     'codigo':7140,
     'nome': 'LI BIG-JBL',
     'subestacao1':subs[2],
@@ -464,12 +464,12 @@ var lns =
         'faseC':'LATERAL ESQUERDA',
       }
     ]
-  },
+  },*/
   {
     'codigo':5140,
     'nome': 'LI UHBC-BNE',
-    'subestacao1':subs[4],
-    'subestacao2':subs[5],
+    'subestacao1':subs[2],
+    'subestacao2':subs[3],
     'torres':[
       {
         'id':1,
@@ -614,7 +614,7 @@ var lns =
         'faseA':'INFERIOR',
         'faseB':'CENTRAL',
         'faseC':'SUPERIOR',
-      },
+      }
     ]
   }
 ];

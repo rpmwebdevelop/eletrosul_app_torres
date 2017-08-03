@@ -21,8 +21,8 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="exampleInputDistancia">Distância</label>
-              <input ng-model="form.distancia" type="text" class="form-control" id="exampleInputDistancia" placeholder="Distância"  ng-disabled="!form.linhaCodigo" ng-required="true" ng-pattern="/^\d{1,100}$/">
+              <label for="exampleInputDistancia">Distância (metros)</label>
+              <input ng-model="form.distancia" type="text" class="form-control" id="exampleInputDistancia" placeholder="ex: 1200"  ng-disabled="!form.linhaCodigo" ng-required="true" ng-pattern="/^\d{1,100}$/">
             </div>
             <button ng-disabled="!form.distancia" type="submit" class="btn btn-primary btn-block" ng-keydown="$event.keyCode === 13 && form.localizacaoClick(form.linhaCodigo, form.distancia)" ng-click="form.localizacaoClick(form.linhaCodigo, form.distancia)">Obter Localização</button>
           </form>
