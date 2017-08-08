@@ -8,19 +8,19 @@ var subs =
 [
   {
     'desc':'alguma coisa',
-    'codigo':'ITA'
+    'codigo':'ALFA'
   },
   {
     'desc':'alguma coisa',
-    'codigo':'PCS'
+    'codigo':'BETA'
   },
   {
     'desc':'alguma coisa',
-    'codigo':'UHBC'
+    'codigo':'GAMA'
   },
   {
     'desc':'alguma coisa',
-    'codigo':'BNE'
+    'codigo':'DELTA'
   }
   /*{
     'desc':'alguma coisa',
@@ -35,7 +35,7 @@ var lns =
 [
   {
     'codigo':6160,
-    'nome': 'LI ITA-PCS',
+    'nome': 'LT ALFA-BETA',
     'subestacao1':subs[0],
     'subestacao2':subs[1],
     'torres':[
@@ -219,7 +219,7 @@ var lns =
   },
   /*{
     'codigo':7140,
-    'nome': 'LI BIG-JBL',
+    'nome': 'LT BIG-JBL',
     'subestacao1':subs[2],
     'subestacao2':subs[3],
     'torres':[
@@ -467,7 +467,7 @@ var lns =
   },*/
   {
     'codigo':5140,
-    'nome': 'LI UHBC-BNE',
+    'nome': 'LT GAMA-DELTA',
     'subestacao1':subs[2],
     'subestacao2':subs[3],
     'torres':[
